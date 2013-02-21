@@ -1,0 +1,13 @@
+#!/bin/bash
+source ~/.bashrc
+echo "Shutting down tomcat"
+
+cd $CATALINA_HOME/bin
+$CATALINA_HOME/bin/shutdown.sh 
+echo '.'
+sleep 5
+killall java
+echo '.'
+sleep 5
+killall -9 java
+

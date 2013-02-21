@@ -1,0 +1,186 @@
+From MAILER-DAEMON  Tue Jan  4 11:48:13 2011
+Return-Path: <>
+X-Original-To: tomcat2@tp-web10.inthinc.com
+Delivered-To: tomcat2@tp-web10.inthinc.com
+Received: by localhost (Postfix)
+	id 4F767A427F; Tue,  4 Jan 2011 11:48:13 -0700 (MST)
+Date: Tue,  4 Jan 2011 11:48:13 -0700 (MST)
+From: MAILER-DAEMON@tp-web10.inthinc.com (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: tomcat2@tp-web10.inthinc.com
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="BEC74A427E.1294166893/localhost"
+Message-Id: <20110104184813.4F767A427F@localhost>
+
+This is a MIME-encapsulated message.
+
+--BEC74A427E.1294166893/localhost
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host localhost.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<root@inthinc>: host slcgw2.iwiglobal.com[66.29.180.59] said: 554 5.7.1
+    <root@inthinc>: Relay access denied (in reply to RCPT TO command)
+
+<8014134311@txt.att.net>: host slcgw2.iwiglobal.com[66.29.180.59] said: 554
+    5.7.1 <8014134311@txt.att.net>: Relay access denied (in reply to RCPT TO
+    command)
+
+<8015747772@txt.att.net>: host slcgw2.iwiglobal.com[66.29.180.59] said: 554
+    5.7.1 <8015747772@txt.att.net>: Relay access denied (in reply to RCPT TO
+    command)
+
+--BEC74A427E.1294166893/localhost
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; localhost
+X-Postfix-Queue-ID: BEC74A427E
+X-Postfix-Sender: rfc822; tomcat2@tp-web10.inthinc.com
+Arrival-Date: Tue,  4 Jan 2011 11:48:12 -0700 (MST)
+
+Final-Recipient: rfc822; root@inthinc
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; slcgw2.iwiglobal.com
+Diagnostic-Code: smtp; 554 5.7.1 <root@inthinc>: Relay access denied
+
+Final-Recipient: rfc822; 8014134311@txt.att.net
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; slcgw2.iwiglobal.com
+Diagnostic-Code: smtp; 554 5.7.1 <8014134311@txt.att.net>: Relay access denied
+
+Final-Recipient: rfc822; 8015747772@txt.att.net
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; slcgw2.iwiglobal.com
+Diagnostic-Code: smtp; 554 5.7.1 <8015747772@txt.att.net>: Relay access denied
+
+--BEC74A427E.1294166893/localhost
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+
+Return-Path: <tomcat2@tp-web10.inthinc.com>
+Received: by localhost (Postfix, from userid 1012)
+	id BEC74A427E; Tue,  4 Jan 2011 11:48:12 -0700 (MST)
+Subject: [ALERT] Tomcat down on tp-web10 at Tue Jan  4 11:48:12 MST 2011
+To: <root@inthinc>,<8014134311@txt.att.net>,<8015747772@txt.att.net>
+X-Mailer: mail (GNU Mailutils 2.1)
+Message-Id: <20110104184812.BEC74A427E@localhost>
+Date: Tue,  4 Jan 2011 11:48:12 -0700 (MST)
+From: tomcat2@tp-web10.inthinc.com
+
+ALERT: at Tue Jan  4 11:48:12 MST 2011
+Tomcat down on tp-web10 at Tue Jan  4 11:48:12 MST 2011
+>From tp-web10
+
+--BEC74A427E.1294166893/localhost--
+
+From MAILER-DAEMON  Tue Jan  4 11:49:41 2011
+Return-Path: <>
+X-Original-To: tomcat2@tp-web10.inthinc.com
+Delivered-To: tomcat2@tp-web10.inthinc.com
+Received: by localhost (Postfix)
+	id 07FCEA4330; Tue,  4 Jan 2011 11:49:41 -0700 (MST)
+Date: Tue,  4 Jan 2011 11:49:41 -0700 (MST)
+From: MAILER-DAEMON@tp-web10.inthinc.com (Mail Delivery System)
+Subject: Undelivered Mail Returned to Sender
+To: tomcat2@tp-web10.inthinc.com
+Auto-Submitted: auto-replied
+MIME-Version: 1.0
+Content-Type: multipart/report; report-type=delivery-status;
+	boundary="D157BA4318.1294166981/localhost"
+Message-Id: <20110104184941.07FCEA4330@localhost>
+Status: O
+X-UID: 3
+
+This is a MIME-encapsulated message.
+
+--D157BA4318.1294166981/localhost
+Content-Description: Notification
+Content-Type: text/plain; charset=us-ascii
+
+This is the mail system at host localhost.
+
+I'm sorry to have to inform you that your message could not
+be delivered to one or more recipients. It's attached below.
+
+For further assistance, please send mail to postmaster.
+
+If you do so, please include this problem report. You can
+delete your own text from the attached returned message.
+
+                   The mail system
+
+<root@inthinc>: host slcgw2.iwiglobal.com[66.29.180.59] said: 554 5.7.1
+    <root@inthinc>: Relay access denied (in reply to RCPT TO command)
+
+<8014134311@txt.att.net>: host slcgw2.iwiglobal.com[66.29.180.59] said: 554
+    5.7.1 <8014134311@txt.att.net>: Relay access denied (in reply to RCPT TO
+    command)
+
+<8015747772@txt.att.net>: host slcgw2.iwiglobal.com[66.29.180.59] said: 554
+    5.7.1 <8015747772@txt.att.net>: Relay access denied (in reply to RCPT TO
+    command)
+
+--D157BA4318.1294166981/localhost
+Content-Description: Delivery report
+Content-Type: message/delivery-status
+
+Reporting-MTA: dns; localhost
+X-Postfix-Queue-ID: D157BA4318
+X-Postfix-Sender: rfc822; tomcat2@tp-web10.inthinc.com
+Arrival-Date: Tue,  4 Jan 2011 11:49:40 -0700 (MST)
+
+Final-Recipient: rfc822; root@inthinc
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; slcgw2.iwiglobal.com
+Diagnostic-Code: smtp; 554 5.7.1 <root@inthinc>: Relay access denied
+
+Final-Recipient: rfc822; 8014134311@txt.att.net
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; slcgw2.iwiglobal.com
+Diagnostic-Code: smtp; 554 5.7.1 <8014134311@txt.att.net>: Relay access denied
+
+Final-Recipient: rfc822; 8015747772@txt.att.net
+Action: failed
+Status: 5.7.1
+Remote-MTA: dns; slcgw2.iwiglobal.com
+Diagnostic-Code: smtp; 554 5.7.1 <8015747772@txt.att.net>: Relay access denied
+
+--D157BA4318.1294166981/localhost
+Content-Description: Undelivered Message
+Content-Type: message/rfc822
+
+Return-Path: <tomcat2@tp-web10.inthinc.com>
+Received: by localhost (Postfix, from userid 1012)
+	id D157BA4318; Tue,  4 Jan 2011 11:49:40 -0700 (MST)
+Subject: [ALERT] Tomcat down on tp-web10 at Tue Jan  4 11:49:40 MST 2011
+To: <root@inthinc>,<8014134311@txt.att.net>,<8015747772@txt.att.net>
+X-Mailer: mail (GNU Mailutils 2.1)
+Message-Id: <20110104184940.D157BA4318@localhost>
+Date: Tue,  4 Jan 2011 11:49:40 -0700 (MST)
+From: tomcat2@tp-web10.inthinc.com
+
+ALERT: at Tue Jan  4 11:49:40 MST 2011
+Tomcat down on tp-web10 at Tue Jan  4 11:49:40 MST 2011
+>From tp-web10
+
+--D157BA4318.1294166981/localhost--
+

@@ -1,0 +1,65 @@
+#!/bin/bash
+source ~/.bashrc
+MY_DIR="$(date +%F-%s)"
+MY_PROCESS="org.apache.catalina.startup.Bootstrap"
+MAX_COUNT=30
+
+function kill_mypid () {
+    KILL_PID=${1}
+    COUNT=0
+    echo -n "Killing PID ${KILL_PID}"
+    while ps --pid ${KILL_PID} | grep -q [0-9]
+    do
+        echo -n "Killing PID ${KILL_PID}"
+        if [ ${COUNT} -gt ${MAX_COUNT} ]
+        then
+            kill -9 ${KILL_PID}
+        else
+            kill ${KILL_PID}
+        fi
+        ((COUNT++))
+        echo -n "."
+        sleep 1
+    done
+    echo "killed"
+}
+
+
+
+
+if [ ! "${CATALINA_HOME}" ] || [ ! -d "${CATALINA_HOME}" ]
+then
+    CATALINA_HOME="${HOME}"
+fi
+
+MY_PID=$(pgrep -u $(whoami) -f -o ${MY_PROCESS})
+if [ "${MY_PID}" ] && [ -x "${CATALINA_HOME}/bin/shutdown.sh" ] && [ -d "${CATALINA_HOME}/logs" ] && [ -d "${CATALINA_HOME}/temp/" ] && [ -d "${CATALINA_HOME}/work" ]
+then
+    ${CATALINA_HOME}/bin/shutdown.sh 
+    sleep 3
+    echo -n "${MY_PROCESS} PID is ${MY_PID}"
+    MY_STOPPED_PID=$(ps -p ${MY_PID})
+    if [ "${MY_STOPPED_PID}" ]
+    then
+        kill_mypid ${MY_PID}
+    else
+        echo "Stopped"
+    fi
+    echo "Archiving logs, deleting temp and work"
+    if [ ! -d "${CATALINA_HOME}/logarchive" ]
+    then
+        mkdir -p ${CATALINA_HOME}/logarchive
+    fi
+    /bin/mv ${CATALINA_HOME}/logs ${CATALINA_HOME}/logarchive/${MY_DIR}
+    /bin/mkdir -p ${CATALINA_HOME}/logs
+    /bin/rm -Rf ${CATALINA_HOME}/temp/*
+    /bin/rm -Rf ${CATALINA_HOME}/work/*
+else
+    echo "we has no valid config to clean, or pid to kill, just start"
+fi
+
+echo "Starting Tomcat"
+${CATALINA_HOME}/bin/startup.sh 
+
+tail -f ${CATALINA_HOME}/logs/catalina.out
+
