@@ -6,6 +6,9 @@ declare -x CATALINA_BASE="${HOME}"
 #declare -x CATALINA_OPTS="DO NOT EVER SET CATALINA_OPTS UNLESS YOU CUSTOMIZE MEMORY USAGE FOR EACH SERVLET"
 PATH="${PATH}:${HOME}/bin"
 
+declare -x PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
+
+#Aliases
 alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls --color=auto'
@@ -13,5 +16,4 @@ alias ll='ls -Falh --color=auto'
 alias lh='ls -Falht --color=auto | head -n 15'
 alias lg='ls -Falh  --color=auto | grep -i --color=auto'
 alias grep='grep --color=auto -P'
-declare -x PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$"
 
