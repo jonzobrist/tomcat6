@@ -87,20 +87,20 @@ fi
 ############################################################################################
 
 
-TIWIPRO_CLIENT_CENT_SERVER="${SILO_NAME}-node0.tiwipro.com"
-MY_ELB_ADDRESS="${SILO_NAME}.inthinc.com"
+TIWIPRO_CLIENT_CENT_SERVER="${SILO_NAME}-node0.example.com"
+MY_ELB_ADDRESS="${SILO_NAME}.example.com"
 echo "User home ${USER_HOME}"
 perl -pi -e "s/WEB_DB_SERVER/${TIWIPRO_CLIENT_CENT_SERVER}/g" ${USER_HOME}/conf/tiwipro.properties
-perl -pi -e "s/WEB_DB_USER/portalUser/g" ${USER_HOME}/conf/tiwipro.properties
-perl -pi -e "s/WEB_DB_PASSWORD/portalPass/g" ${USER_HOME}/conf/tiwipro.properties
+perl -pi -e "s/WEB_DB_USER/${WEB_DB_USER}/g" ${USER_HOME}/conf/tiwipro.properties
+perl -pi -e "s/WEB_DB_PASSWORD/${WEB_DB_PASSWORD}/g" ${USER_HOME}/conf/tiwipro.properties
 perl -pi -e "s/TIWIPRO_CLIENT_DB_SERVER/${TIWIPRO_CLIENT_CENT_SERVER}/g" ${USER_HOME}/conf/tiwipro.properties
 perl -pi -e "s/MY_ELB_ADDRESS/${MY_ELB_ADDRESS}/g" ${USER_HOME}/conf/tiwipro.properties
 perl -pi -e "s/TIWIPRO_SERVER_ID/${TIWIPRO_SERVER_ID}/g" ${USER_HOME}/conf/tiwipro.properties
 perl -pi -e "s/VOXEO_TOKEN/${O_VOXEO_TOKEN}/g" ${USER_HOME}/conf/tiwipro.properties
 perl -pi -e "s/GOOGLE_ID/${Q_GOOGLE_ANALYTICS_KEY}/g" ${USER_HOME}/conf/tiwipro.properties
-perl -pi -e "s/MY_POSTGRES_SERVER/tp-mapserv0.tiwipro.com/g" ${USER_HOME}/conf/tiwipro.properties
-perl -pi -e "s/POSTGRES_USER/proprod/g" ${USER_HOME}/conf/tiwipro.properties
-perl -pi -e "s/POSTGRES_PASSWORD/du0Oifo5aeth9ei/g" ${USER_HOME}/conf/tiwipro.properties
+perl -pi -e "s/MY_POSTGRES_SERVER/${MY_POSTGRES_SERVER}/g" ${USER_HOME}/conf/tiwipro.properties
+perl -pi -e "s/POSTGRES_USER/${POSTGRES_USER}/g" ${USER_HOME}/conf/tiwipro.properties
+perl -pi -e "s/POSTGRES_PASSWORD/${POSTGRES_PASSWORD}/g" ${USER_HOME}/conf/tiwipro.properties
 
 if [ -f "${USER_HOME}/cron" ]
  then
