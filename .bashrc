@@ -1,5 +1,6 @@
 source /etc/profile
 
+declare -x JAVA_HOME="/usr"
 declare -x JAVA_OPTS="-Djava.awt.headless=true -XX:MaxPermSize=768m -XX:PermSize=512m -Xmx2048M -Xms256M -Dlog4j.configuration=log4j-prod.properties -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:-CMSParallelRemarkEnabled -XX:+UseStringCache -XX:+OptimizeStringConcat -XX:-PrintGCDetails -XX:-PrintGCTimeStamps -XX:-PrintTenuringDistribution -XX:-PrintCommandLineFlags"
 declare -x CATALINA_HOME="${HOME}"
 declare -x CATALINA_BASE="${HOME}"
