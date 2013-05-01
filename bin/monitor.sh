@@ -1,5 +1,5 @@
 #!/bin/bash
-URL="https://localhost:8443/service/api/account/"
+URL="https://MY_ELB_ADDRESS/service/api/account/"
 RUNFILE="${HOME}/monitor.pid"
 LOGFILE="${HOME}/logs/monitor.log"
 HTML_STATUS="/tmp/web.html"
