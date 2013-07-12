@@ -24,9 +24,6 @@ function kill_mypid () {
     echo "killed"
 }
 
-
-
-
 if [ ! "${CATALINA_HOME}" ] || [ ! -d "${CATALINA_HOME}" ]
 then
     CATALINA_HOME="${HOME}"
@@ -50,14 +47,26 @@ then
     then
         mkdir -p ${CATALINA_HOME}/logarchive
     fi
-    /bin/mv $CATALINA_HOME/logs $CATALINA_HOME/logarchive/${MY_DIR}
-    /bin/mkdir -p $CATALINA_HOME/logs
-    /bin/rm -Rf $CATALINA_HOME/temp/*
-    /bin/rm -Rf $CATALINA_HOME/work/*
+    if [ -d "${CATALINA_HOME}/webapps" ]
+    then
+        for F in $(find ${CATALINA_HOME}/webapps -maxdepth 1 -type f -iname "*.war")
+        do
+            FILE_NAME="${F##*/}"
+            APP="${FILE_NAME%%.war}"
+            echo "Cleaning app ${APP} at $(date)"
+            /bin/rm -Rf ${CATALINA_HOME}/webapps/${APP}
+        done
+    else
+        echo "No webapps dir to clean"
+    fi
+    /bin/mv ${CATALINA_HOME}/logs ${CATALINA_HOME}/logarchive/${MY_DIR}
+    /bin/mkdir -p ${CATALINA_HOME}/logs
+    /bin/rm -Rf ${CATALINA_HOME}/temp/*
+    /bin/rm -Rf ${CATALINA_HOME}/work/*
 else
     echo "we has no valid config to clean, or pid to kill, just start"
 fi
 
 echo "Starting Tomcat"
-$CATALINA_HOME/bin/startup.sh 
+${CATALINA_HOME}/bin/startup.sh 
 
