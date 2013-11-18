@@ -1,1 +1,0 @@
-*/3 * * * * ${HOME}/bin/monitor.sh >> ${HOME}/logs/cron.log 2>&1
